@@ -28,4 +28,3 @@ class StaticPagesURLTests(TestCase):
             response.content.decode('utf-8'),
             'А это вторая страница!'
         )
-
