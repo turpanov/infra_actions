@@ -18,7 +18,13 @@ class StaticPagesURLTests(TestCase):
     def test_page_shows_correct_content(self):
         """Проверка контента страниц."""
         response = self.guest_client.get('/')
-        self.assertContains(response.content.decode('utf-8'), 'У меня получилось!')
+        self.assertContains(
+            response.content.decode('utf-8'),
+            'У меня получилось!'
+        )
 
         response = self.guest_client.get('/second_page/')
-        self.assertContains(response.content.decode('utf-8'), 'А это вторая страница!')
+        self.assertContains(
+            response.content.decode('utf-8'),
+            'А это вторая страница!'
+        )
